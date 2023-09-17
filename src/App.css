@@ -1,5 +1,7 @@
+
 .App {
   text-align: center;
+  margin: 20px;
 }
 
 .App-logo {
@@ -35,4 +37,86 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.d-flexx{
+  display: flex;
+}
+.align-center{
+  align-items: center;
+}
+
+.mainCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+ 
+}
+.txt-center{
+  text-align: right;
+}
+.main-card-div{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.time-chips{
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.time-div{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.avtar-height{
+width: 145px !important;
+height: 145px !important;
+}
+.timingsDiv{
+  display: flex;
+  gap: 6px;
+}
+.dayBtn{
+  background-color: red !important;
+  color: whitesmoke !important;
+}
+.timeChipStyling{
+  background-color: darkblue !important;
+  color: white !important;
+  border-radius: 10px !important;
+}
+.bg-color{
+  background-color: #000000eb;
+}
+.main-card-div{
+  background-color: black;
+  margin: 10px;
+
+}
+.card-border{
+  margin: 10px;
+  border: 2px solid red;
+}
+.avatar-border{
+  border: 2px solid red;
+  border-radius: 100%; 
+}
+.red-border{
+  border: 2px solid red !important;
+}
+.view-btn{
+  /* border: 2px solid black !importants; */
+  /* background-color: red !important; */
+  color: black  !important;
+}
+.auth-btns{
+  margin-right: 10px;
+}
+.auth-btns button{
+  margin-right: 10px !important;
+  color: white !important;
+  border: 1px solid red;
 }
