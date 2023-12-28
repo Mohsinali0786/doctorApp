@@ -41,14 +41,20 @@ const handleClose = (yes) => {
 
   },[props.setOpen])
 
-const bookedAppointment=(body)=>{
-    console.log(body)
-    // axios.post(`http://localhost:4000${POST?.BOOKEDAPPOINTMENT}`,body)
-    // .then((res) => {
-    //     console.log(res.data.AllDoctors, "=res=")
-    // }).catch((err) => {
-    //     console.log('Error====>', err)
-    // })
+const bookedAppointment=(obj)=>{
+  let body={
+    date:obj?.dateObj,
+    doctorId:obj?.doctorObj?._id,
+    loginUserId:obj?.loginData?._id
+    // userId
+  }
+    // console.log(body)
+    axios.post(`http://localhost:4000${POST?.BOOKEDAPPOINTMENT}`,body)
+    .then((res) => {
+        console.log(res.data.AllDoctors, "=res=")
+    }).catch((err) => {
+        console.log('Error====>', err)
+    })
 }
   return (
     <div>

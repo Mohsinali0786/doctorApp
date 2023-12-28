@@ -3,27 +3,24 @@ import './App.css';
 import { Calender } from './Components/Calender';
 import DoctorList from './Pages/doctorList';
 import Header from './Components/header';
+import SideBar from './Components/sidebar'
+import { UserList } from './Pages/userList';
+import  AppRouter from './config/route'
+import { BrowserRouter, Routes } from 'react-router-dom';
+
 
 function App() {
   return (
-    <div className="App bg-color">
-      <Header/>
-      <DoctorList/>
-      {/* <Calender/> */}
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+    <div className="App bg-color ">
+      <BrowserRouter> 
+        <Header/>
+        <div class='body-heigh'>
+          <div style={{textAlign:'left' , display:'flex'}}>
+            <SideBar/>
+            <AppRouter/>
+          </div>
+        </div>
+      </BrowserRouter> 
     </div>
   );
 }

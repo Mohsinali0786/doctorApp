@@ -18,11 +18,23 @@ const AUTH = {
 const GET = {
   GETDOCTORS: `${getApi}/doctors`,
   GETAPPOINTMENT: `${getApi}/getAllAppointment`,
+  GETALLUSERS: `${getApi}/getAllUsers`,
+  GETALLAPPOINTMENTS: `${getApi}/getAllAppointment`,
+  // GETUSERSBYID: `${getApi}/getAllUsers/:id`,
+
+
   
 //   GETCOMPANY: `${getApi}/getcompany`,
 //   GETATTENDANCE: `${getApi}/getattendance`,
 };
 const POST = {
    BOOKEDAPPOINTMENT: `${postApi}/doctors`,
+   REGISTRATION: `${postApi}/registration`,
+   EDITUSERS: `${postApi}/editUser`,
+   DELETEUSERS: `${postApi}/deleteUser`,
+  LOGIN: `${postApi}/login`,
+  BOOKEDAPPOINTMENT: `${postApi}/bookAppointment`,
+
+
 };
 export { AUTH, GET ,POST};

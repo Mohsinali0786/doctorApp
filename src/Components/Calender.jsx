@@ -13,7 +13,7 @@ export function Calender() {
 
   const handleChange = (value) => {
     setDate(value);
-    dispatch(set_Selected_Date({ data: value, value, isClicked: true }));
+    dispatch(set_Selected_Date({ date: value, isClicked: true }));
   };
   const filterDate = () => {
     var now = new Date();
@@ -21,11 +21,14 @@ export function Calender() {
     now = now.getDate();
     for (var d = now; d <= now + 6; d++) {
       let myDate = new Date(date.setDate(d));
-      myDates.push(myDate.getDate());
+      if(myDate.getDay() == 1 || myDate.getDay() == 2 || myDate.getDay() == 3 || myDate.getDay() == 4 || myDate.getDay() == 5){
+        myDates.push(myDate.getDate());
+      }
     }
    };
    function daysInMonth(month, year) {
-    return new Date(year, month, 0).getDate()-1;
+    console.log(new Date(year, month+1, 0).getDate()-1 , 'new Date(year, month, 0).getDate()-1')
+    return new Date(year, month+1, 0).getDate();
 }
   filterDate()
   return (
